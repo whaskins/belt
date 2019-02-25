@@ -1,0 +1,12 @@
+<div id="cakes">
+    <table class="table table-striped table-responsive-md btn-table">
+      <tr *ngFor="let cake of cakes">
+        <th>{{cake.imageURL}}</th>
+        <td>Rating:{{cake.average}}</td>
+        <td>
+          <button [routerLink]="['reviews/', cake._id]">Read Reviews</button>
+          <button [routerLink]="['newreview/', cake._id]">Write Review</button>
+        </td>
+      </tr>
+    </table>
+    <router-outlet (update)="getCakes()"></router-outlet>

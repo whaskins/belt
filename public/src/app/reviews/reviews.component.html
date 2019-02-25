@@ -1,0 +1,9 @@
+<button (click)="deleteMovie()" [routerLink]="['/']">Delete Movie</button>
+<table *ngIf="reviews">
+  <tr *ngFor="let rev of reviews">
+    <th>{{rev.rating}} Stars</th>
+    <td>{{rev.reviewer}}</td>
+    <td>{{rev.comment}}</td>
+    <td><button (click)="deleteRating(rev._id)" [routerLink]="['/']">Delete</button></td>
+  </tr>
+</table>

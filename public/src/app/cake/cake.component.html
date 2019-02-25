@@ -1,0 +1,6 @@
+<h2>Baked by {{cake.data.baker}}</h2>
+<div *ngFor="let rating of cake.data.ratings">
+  <h3>{{rating.rating}} Stars</h3>
+  <h5>by {{rating.reviewer}}</h5>
+  <p>{{rating.comment}}</p>
+</div>

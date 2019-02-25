@@ -1,0 +1,19 @@
+
+<div class="form-group">
+<form>
+  <label for="">Name</label>
+  <p *ngIf="nameError">{{nameError}}</p>
+  <input type="text" name="name" id="" [(ngModel)]="reviewer" (keyup)="checkName()">
+    <select name="stars" #rating id="" [(ngModel)]="stars">
+      <option value=1>1 Star</option>
+      <option value=2>2 Star</option>
+      <option value=3>3 Star</option>
+      <option value=4>4 Star</option>
+      <option value=5>5 Star</option>
+    </select><br>
+  <p *ngIf="commentError">{{commentError}}</p>
+
+    <textarea [(ngModel)]="review" name="comment" #comment id="" cols="20" rows="5" placeholder="Type your comment here" (keyup)="checkComment()"></textarea>
+    <button type="submit" *ngIf="enabeled" (click)="newReview()" [routerLink]="['/movies']">Submit</button>
+  </form>
+</div>

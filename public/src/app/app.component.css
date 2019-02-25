@@ -1,0 +1,11 @@
+img {
+    max-width: 200px;
+    height: auto;
+    display: inline-block;
+}
+.cake {
+    display: block;
+}
+form {
+    display: inline-block;
+}
